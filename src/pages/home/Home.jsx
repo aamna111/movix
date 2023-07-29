@@ -2,7 +2,7 @@ import React from 'react'
 import HeroBanner from './heroBanner/HeroBanner'
 import './style.scss'
 import Tranding from './tranding/Tranding'
-import Popular from './popular/popular'
+import Popular from './popular/Popular'
 import TopRated from './topRated/TopRated'
 function Home() {
   return (
@@ -10,10 +10,7 @@ function Home() {
       <HeroBanner/>
       <Tranding/>
       <Popular/>
-      <TopRated/>
-        
-     
-      
+      <TopRated/> 
      </div>
   )
 }
