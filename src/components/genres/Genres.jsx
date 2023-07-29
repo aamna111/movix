@@ -19,4 +19,4 @@ const Genres = ({data}) => {
   )
 }
 
-export default Genres
+export default Genres;

@@ -33,5 +33,16 @@
     "@vitejs/plugin-react": "^3.1.0",
     "gh-pages": "^5.0.0",
     "vite": "^4.2.0"
-  }
+  },
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aamna111/movix.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aamna111/movix/issues"
+  },
+  "description": ""
 }
