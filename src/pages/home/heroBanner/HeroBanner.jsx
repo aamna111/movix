@@ -1,7 +1,7 @@
 
 import React , {useState , useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
-import useFetch from '../../../hook/usefetch'
+import useFetch from '../../../hook/useFetch'
 import { useSelector } from 'react-redux'
 import Img from '../../../components/lazyLoadImage/Img'
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper'
