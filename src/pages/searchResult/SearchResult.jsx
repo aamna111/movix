@@ -31,7 +31,7 @@ function SearchResult() {
         if(data?.results){
           setdata({
             ...data,
-            results : [...data?.results , ...results.results]
+            results : [...data?.results , ...res.results]
           });
         }else{
           setdata(res)
