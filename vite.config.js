@@ -1,8 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/movix/'
-})
+  base: '/movix/', // Set the base path for deployment
+  server: {
+    port: 3000, // Change dev server port
+  },
+  build: {
+    outDir: 'dist', // Specify output directory for production builds
+  },
+  define: {
+    'process.env': process.env, // Include environment variables
+  },
+});
