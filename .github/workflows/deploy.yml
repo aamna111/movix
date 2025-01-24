@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-pages-artifact@v4
         with:
           # Upload dist repository
-          path: './dist'
+          path: './public'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: peaceiris/actions-gh-pages@v3
