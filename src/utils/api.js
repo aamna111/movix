@@ -13,6 +13,8 @@ export const fetchDataFromApi = async(url , params) => {
             headers: {
                 ...headers,
                 'X-Requested-With': 'XMLHttpRequest',
+                'Access-Control-Allow-Origin': '*',
+                Accept: 'application/json',
             },
             params: params,
         });
