@@ -13,8 +13,7 @@ export const fetchDataFromApi = async(url , params) => {
             headers: {
                 ...headers,
                 'X-Requested-With': 'XMLHttpRequest',
-                'Access-Control-Allow-Origin': '*',
-                Accept: 'application/json',
+                'Access-Control-Allow-Headers': 'sentry-trace, baggage'
             },
             params: params,
         });
