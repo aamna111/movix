@@ -10,7 +10,7 @@ import useFetch from "../../../hook/useFetch";
 import Genres from "../../../components/genres/Genres";
 import CircleRating from "../../../components/circleRating/CircleRating";
 import Img from "../../../components/lazyLoadImage/Img.jsx";
-import PosterFallback from "../../../assets/no-poster.png";
+import PosterFallback from "../../../helper/no-poster.png";
 import { PlayIcon } from "../Playbtn";
 import VideoPopup from "../../../components/videoPopup/VideoPopUp";
 
