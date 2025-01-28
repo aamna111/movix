@@ -1,5 +1,9 @@
-import { defineConfig } from 'vite';
+import { dirname, resolve } from 'node:path'
 import react from '@vitejs/plugin-react';
+import { fileURLToPath } from 'node:url'
+import { defineConfig } from 'vite'
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
@@ -8,7 +12,11 @@ export default defineConfig({
     port: 3000, // Change dev server port
   },
   build: {
-    outDir: 'dist', // Specify output directory for production builds
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+      },
+    },
   },
   define: {
     'process.env': process.env, // Include environment variables
