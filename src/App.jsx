@@ -48,7 +48,11 @@ function App() {
       dispatch(getGenres(allGenres));
   };
   return (
-      <BrowserRouter>
+      <BrowserRouter 
+      basename="/movix"
+      future={{
+        v7_startTransition: true,
+      }}>
           <Header />
           <Routes>
               <Route path="/" element={<Home />} />

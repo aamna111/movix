@@ -7,7 +7,7 @@ import Img from '../../../components/lazyLoadImage/Img'
 import ContentWrapper from '../../../components/contentWrapper/ContentWrapper'
 import './style.scss';
 const HeroBanner = () => {
-    const [Background, setBackground] = useState("")
+    const [background, setBackground] = useState("")
     const [query, setquery] = useState("")
     const navigate = useNavigate();
     const {url } = useSelector((state) => state.home)
@@ -30,7 +30,7 @@ const HeroBanner = () => {
   return (
     <div className='herobanner'>
        { !loading && <div className="backdrop-img">
-            <Img src={Background}/>
+            <Img src={background}/>
         </div>}
         <div className="opacity-layer">
             
