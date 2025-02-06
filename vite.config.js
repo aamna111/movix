@@ -9,9 +9,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   plugins: [react()],
   base: '/movix/', // Set the base path for deployment
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "src"),
-    },
+  build: {
+    // Ensure assets are built to the correct directory
+    outDir: 'dist',
+    // Generate source maps for better debugging
+    sourcemap: true,
+    // Configure asset handling
+    assetsDir: 'assets',
   }
+
 });
