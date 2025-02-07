@@ -4,6 +4,9 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/movix/', // This slash at the end is important!
+  define: {
+    'import.meta.env.VITE_APP_TMDB_TOKEN': JSON.stringify(process.env.VITE_API_KEY),
+  },
   build: {
     outDir: 'dist',
     // Force Vite to handle all assets with the correct base path
