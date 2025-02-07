@@ -22,7 +22,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          PUBLIC_URL: /movix
+           BASE_URL: /movix/
           
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -30,3 +30,10 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           cname: # If you have a custom domain, add it here
+
+      - name: Debug Asset Paths
+        run: |
+          echo "Listing dist directory:"
+          ls -R dist
+          echo "Checking index.html contents:"
+          cat dist/index.html    
