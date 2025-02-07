@@ -1,15 +1,19 @@
-const fs = require('fs')
 const path = require('path')
+const fs = require('fs')
 
-// Function to update paths in HTML file
 function updatePaths() {
-  const indexPath = path.join(__dirname, 'dist/index.html')
+  // Use the correct path to your dist folder
+  const indexPath = path.join(__dirname, '../dist/index.html')
+  
+  // Rest of your script remains the same
   let html = fs.readFileSync(indexPath, 'utf-8')
   
-  // More comprehensive path replacement
   html = html.replace(
-    /(?:src|href)="\/assets\//g, 
-    (match) => match.replace('/assets/', '/movix/assets/')
+    /src="\/assets\//g, 
+    'src="/movix/assets/'
+  ).replace(
+    /href="\/assets\//g, 
+    'href="/movix/assets/'
   )
   
   fs.writeFileSync(indexPath, html)
